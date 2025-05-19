@@ -3,7 +3,7 @@ public class Main {
         System.out.println("Задача №1");   //Задача 1
         int[] payments = {723_778, 879_933, 901_844, 831_023, 698_989};
         int sum = 0;
-        for (int current : payments ) {
+        for (int current : payments) {
             sum = sum + current;
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
@@ -26,11 +26,10 @@ public class Main {
         System.out.println();
 
 
-
         System.out.println("Задача №3");  //Задача 3
         int[] expenditure = {345_987, 333_342, 222_777, 444_787, 777_455};
         int amount = 0;
-        for (int current : expenditure ) {
+        for (int current : expenditure) {
             amount = amount + current;
         }
         float averageExpenditure = (float) amount / expenditure.length;
@@ -38,12 +37,13 @@ public class Main {
         System.out.println();
 
 
-
         System.out.println("Задача №4");  //Задача 4
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length-1; i >= 0; i--) {
-            System.out.print(reverseFullName[i]);
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int x = 0, y = reverseFullName.length - 1; x < y; x++, y--) {
+            char z = reverseFullName[x];
+            reverseFullName[x] = reverseFullName[y];
+            reverseFullName[y] = z;
         }
-
+        System.out.println(reverseFullName);
     }
 }
